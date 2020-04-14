@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { CardList } from './components/card_list/card_list.component'
 import './App.css';
 
 class App extends Component{
@@ -19,6 +20,22 @@ class App extends Component{
           name: 'Korea',
           id: '3'
         },
+        {
+          name: 'Ghana',
+          id: '4'
+        },
+        {
+          name: 'Qatar',
+          id: '5'
+        },
+        {
+          name: 'Cameroon',
+          id: '6'
+        },
+        {
+          name: 'Nigeria',
+          id: '7'
+        },
       ]
     }
   }
@@ -26,9 +43,7 @@ class App extends Component{
   render(){
     return (
       <div className="App">
-        { this.state.flags.map(flag => 
-          <h1 key={flag.id}> {flag.name} </h1>
-        )}
+        <CardList flags={this.state.flags} />
       </div>
     )
   }
