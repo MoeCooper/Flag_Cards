@@ -60,9 +60,9 @@ class App extends Component{
   
 
   toggleImage(){
-    if(this.state.open === false)
+    this.state.open === false ?
         this.setState({images: this.state.flags.images })
-    else
+    :
         this.setState({images: true })
  }
 
