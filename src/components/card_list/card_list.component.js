@@ -5,7 +5,10 @@ import './card_list.styles.css'
 export const CardList = props => (
     <div className='card-list'>
          {props.countries.map(country => (
-          <Card key={country} country={country} />
+          <Card key={country.latlng} country={country} />
+        ))}
+         {props.regionSearch.map(country => (
+          <Card key={country.latlng} country={country} />
         ))}
     </div>
 )
