@@ -28,7 +28,7 @@ class App extends Component{
 
   toggleImage(){
     this.state.open === false ?
-      this.setState({images: this.state.countries.images }) : this.setState({images: true })
+      this.setState({flags: this.state.countries.flags }) : this.setState({flags: true })
  }
 
   render(){
